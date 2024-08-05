@@ -10,6 +10,8 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class Layout01 extends Application {
+    // 오늘은 날씨가 엄청 더워요.
+
     @Override
     public void start(Stage stage) throws Exception {
         HBox container = new HBox();
