@@ -13,6 +13,7 @@ public class Layout01 extends Application {
     // 오늘은 날씨가 엄청 더워요.
     // 오늘 점심은 시원한 것으로 먹읍시다.
     // 아무거나
+    // 철수가 먼저 푸시함
 
     @Override
     public void start(Stage stage) throws Exception {
