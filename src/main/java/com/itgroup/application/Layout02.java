@@ -21,6 +21,10 @@ public class Layout02 extends Application {
     }
 
     public static void main(String[] args) {
-      launch(args);
+        // 여기는 메인 메소드입니다.
+        System.out.println("aaa");
+        launch(args);
     }
+
+
 }
