@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0"
+            prefWidth="1120.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.itgroup.controller.CoffeeExamController">
+   <top>
+      <AnchorPane prefHeight="120.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+         <children>
+
+            <Button onAction="#onInsert" layoutX="30.0" layoutY="21.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0"
+                    text="등록">
+               <font>
+                  <Font name="System Bold" size="15.0"/>
+               </font>
+            </Button>
+            <Button onAction="#onUpdate" layoutX="150.0" layoutY="21.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0"
+                    text="수정">
+               <font>
+                  <Font name="System Bold" size="15.0"/>
+               </font>
+            </Button>
+            <Button onAction="#onDelete" layoutX="270.0" layoutY="21.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0"
+                    text="삭제">
+               <font>
+                  <Font name="System Bold" size="15.0"/>
+               </font>
+            </Button>
+            <Button onAction="#onSaveFile" fx:id="btnSaveFile" layoutX="390.0" layoutY="21.0" mnemonicParsing="false" prefHeight="45.0"
+                    prefWidth="90.0" text="파일 저장">
+               <font>
+                  <Font name="System Bold" size="15.0"/>
+               </font>
+            </Button>
+            <Button onAction="#onClosing" layoutX="510.0" layoutY="21.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0"
+                    text="종료">
+               <font>
+                  <Font name="System Bold" size="15.0"/>
+               </font>
+            </Button>
+
+            <Label layoutX="120.0" layoutY="90.0" text="출력 모드 선택 :"/>
+            <Label fx:id="lblChoice" layoutX="360.0" layoutY="90.0" text="현재 모드 : 전체 모드"/>
+            <Label id="lblChoice" fx:id="pagingStatus" layoutX="540.0" layoutY="90.0" text="총 51건[1/6]"/>
+            <ComboBox onAction="#choiceSelect" fx:id="fieldSearch" layoutX="210.0" layoutY="85.0" prefWidth="120.0"/>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox prefHeight="360.0" prefWidth="660.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="productTable" prefHeight="360.0" prefWidth="660.0">
+               <columns>
+                  <TableColumn prefWidth="120.0" text="상품번호"/>
+                  <TableColumn prefWidth="120.0" text="이름"/>
+                  <TableColumn prefWidth="120.0" text="제조회사"/>
+                  <TableColumn prefWidth="120.0" text="카테고리"/>
+                  <TableColumn prefWidth="120.0" text="입고일자"/>
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pagination fx:id="pagination" prefHeight="200.0" prefWidth="600.0"/>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
+

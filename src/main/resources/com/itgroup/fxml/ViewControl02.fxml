@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itgroup.controller.ViewControl02Controller">
+   <children>
+      <Label layoutX="30" layoutY="30" text="리스트 뷰">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+       <Label layoutX="210" layoutY="30" text="테이블 뷰">
+           <font>
+               <Font name="System Bold" size="25.0" />
+           </font>
+       </Label>
+       <Label layoutX="390" layoutY="30" text="이미지 뷰">
+           <font>
+               <Font name="System Bold" size="25.0" />
+           </font>
+       </Label>
+      <ListView fx:id="listView" layoutX="30" layoutY="100.0" prefHeight="200.0" prefWidth="100.0" />
+      <TableView fx:id="tableView" layoutX="210.0" layoutY="100.0" prefHeight="200.0" prefWidth="160.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="이름" />
+          <TableColumn prefWidth="75.0" text="이미지" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imageView" fitHeight="200.0" fitWidth="200.0" layoutX="390.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="90" layoutY="330.0" onAction="#handleBtnOkAction" mnemonicParsing="false" text="확인">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+       <Button layoutX="210" layoutY="330.0" onAction="#handleBtnCancelAction" mnemonicParsing="false" text="취소">
+           <font>
+               <Font name="System Bold" size="25.0" />
+           </font>
+       </Button>
+   </children>
+</AnchorPane>
